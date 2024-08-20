@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            >
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ds"
+                android:layout_width="150dp"
+                android:layout_height="110dp"
+                android:src="@drawable/logo"
+                android:layout_marginBottom="15dp"
+                app:shapeAppearanceOverlay="@style/CircularShapeAppearance" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/formatted_text"
+                android:layout_marginBottom="30dp"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.Material3.DisplaySmall"
+                android:textSize="32sp" />
+        </LinearLayout>
+
+
+        <!-- Nama Field -->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/namaField"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_height="wrap_content"
+            android:hint="Masukkan Nama Anda">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- NIM Field -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/nimField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+
+            android:hint="Masukkan Nim Anda">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_nim"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gender"
+            android:textSize="16sp"
+            android:textAlignment="textStart"
+            android:layout_marginBottom="10dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            >
+
+            <RadioGroup
+                android:id="@+id/radio_group_gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <!-- Card for Male -->
+                <LinearLayout
+                    android:id="@+id/card_male"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_card_background"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <RadioButton
+                        android:id="@+id/rb_male"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/iv_male"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/gender_male" />
+
+                    <TextView
+                        android:id="@+id/tv_male"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Male"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_check_male"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+
+                        android:layout_gravity="end"
+                        android:src="@drawable/ic_check"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <!-- Card for Female -->
+                <LinearLayout
+                    android:id="@+id/card_female"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:gravity="center"
+                    android:background="@drawable/selector_card_background"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <RadioButton
+                        android:id="@+id/rb_female"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:visibility="gone"/>
+
+                    <ImageView
+                        android:id="@+id/iv_female"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/gender_female" />
+
+                    <TextView
+                        android:id="@+id/tv_female"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Female"
+                        android:textSize="16sp"
+                        android:layout_marginTop="8dp" />
+
+                    <ImageView
+                        android:id="@+id/iv_check_female"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_check"
+                        android:layout_gravity="end"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </RadioGroup>
+        </LinearLayout>
+
+
+
+        <!-- Uang Saku dan Jumlah SKS Field with col-6 col-6 Layout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <!-- Uang Saku Field -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/uangSaku"
+                android:layout_width="0dp"
+                android:layout_marginEnd="8dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Uang Saku">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/sks"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="SKS">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <!-- Submit Button -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dip"
+                android:background="@drawable/rounded_corner"
+                android:text="Submit"
+                android:textSize="20dp"
+                android:layout_weight="1"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

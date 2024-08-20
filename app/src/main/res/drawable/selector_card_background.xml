@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background saat kartu dipilih -->
+    <item android:drawable="@drawable/selected_background" android:state_selected="true"/>
+    <!-- Background saat kartu ditekan -->
+    <item android:drawable="@drawable/pressed_background" android:state_pressed="true"/>
+    <!-- Background default saat tidak dipilih -->
+    <item android:drawable="@drawable/default_background"/>
+</selector>
